@@ -1,0 +1,5 @@
+Questão 1 – Gerador de Senha Simples 🔐
+
+let nome = prompt("Insira uma palavra: ")
+let senha = nome.trim().replaceAll("a","@").replaceAll("i","1").replaceAll("o","0")
+alert(`Senha gerada: ${senha}`)
