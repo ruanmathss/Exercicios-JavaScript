@@ -1,0 +1,16 @@
+let dado = Math.floor(Math.random() * 6 + 1)
+let player1 = Number(prompt("Jogador 1, informe um número de 1 a 6"))
+let player2 = Number(prompt("Jogador 2, informe um número de 1 a 6"))
+
+if (!player1 || !player2 || player1 > 6 || player2 > 6) {
+    alert("Informe um valor válido")
+}
+else if (Math.abs(player1 - dado) < Math.abs(player2 - dado)) {
+    alert(`O jogador 1 venceu o jogo. O número sorteado foi ${dado}`)
+}
+else if (Math.abs(player1 - dado) > Math.abs(player2 - dado)) {
+    alert(`O jogador 2 venceu o jogo. O número sorteado foi ${dado}`)
+}
+else {
+    alert("O jogo terminou empatado")
+}
