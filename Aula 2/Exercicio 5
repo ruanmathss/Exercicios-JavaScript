@@ -1,0 +1,5 @@
+let nomeUsuario = prompt("Qual o seu nome? ")
+
+nomeUsuario = nomeUsuario.slice(0,1).toUpperCase() + nomeUsuario.slice(1).toLowerCase()
+
+alert(`Olá, ${nomeUsuario}, seja bem-vindo!`)
