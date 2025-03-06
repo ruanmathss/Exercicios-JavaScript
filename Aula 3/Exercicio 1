@@ -1,45 +1,43 @@
-let number_1 = Number(prompt("Informe um número: "))
-let number_2 = Number(prompt("Informe o segundo número: "))
-let operacao = prompt("Informe o símbolo da operação que você deseja realizar (+, -, *, / ou %)")
-let resultado
+function calculadoraSimples() {
+    let number_1 = Number(prompt("Informe um número: "))
+    let number_2 = Number(prompt("Informe o segundo número: "))
+    let operacao = prompt("Informe o símbolo da operação que você deseja realizar (+, -, *, / ou %)")
+    let resultado
 
-if (isNaN(number_1) || isNaN(number_2)) {
-    alert("Você inseriu um valor não numérico!")
-}
-else {
-    switch (operacao) {
-        case "+":
-            resultado = number_1 + number_2
-            alert(`O resultado da operação é ${resultado}`)
-            break;
-        case "-":
-            resultado = number_1 - number_2
-            alert(`O resultado da operação é ${resultado}`)
-            break;
-        case "*":
-            resultado = number_1 * number_2
-            alert(`O resultado da operação é ${resultado}`)
-            break;
-        case "/":
-            if (number_2 == 0) {
-                alert("Não é possível dividir por 0")
-            }
-            else {
-                resultado = number_1 / number_2
-                alert(`O resultado da operação é ${resultado}`)
-            }
-            break;
-        case "%":
-            if (number_2 == 0) {
-                alert("Não é possível dividir por 0")
-            }
-            else {
-                resultado = number_1 % number_2
-                alert(`O resultado da operação é ${resultado}`)
-            }
-            break;
-        default:
-            alert("Operação inválida! Escolha entre +, -, *, % ou /.")
-            break;
+    if (isNaN(number_1) || isNaN(number_2)) {
+        return alert("Você inseriu um valor não numérico")
+    }
+    else {
+        switch (operacao) {
+            case "+":
+                resultado = number_1 + number_2
+                return alert(`O resultado da operação é ${resultado}`)
+            case "-":
+                resultado = number_1 - number_2
+                return alert(`O resultado da operação é ${resultado}`)
+            case "*":
+                resultado = number_1 * number_2
+                return alert(`O resultado da operação é ${resultado}`)
+            case "/":
+                if (number_2 == 0) {
+                    return alert("Não é possível dividir por 0")
+                }
+                else {
+                    resultado = number_1 / number_2
+                    return alert(`O resultado da operação é ${resultado}`)
+                }
+            case "%":
+                if (number_2 == 0) {
+                    return alert("Não é possível dividir por 0")
+                }
+                else {
+                    resultado = number_1 % number_2
+                    return alert(`O resultado da operação é ${resultado}`)
+                }
+            default:
+                return alert("Operação inválida! Escolha entre +, -, *, % ou /.")
+        }
     }
 }
+
+calculadoraSimples()
