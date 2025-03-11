@@ -1,0 +1,13 @@
+function converterValor () {
+    let valor = Number(prompt("Insira um valor: "))
+    if (isNaN(valor)) {
+        alert("Insira um valor válido")
+        return
+    }
+    else {
+        valor = valor.toLocaleString("pt-br", {style: "currency", currency: "BRL"})
+        return alert(`Valor formatado: ${valor}`)
+    }
+}
+
+converterValor()
