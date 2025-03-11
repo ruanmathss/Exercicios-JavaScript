@@ -1,0 +1,16 @@
+function exponenciacao () {
+    let base = Number(prompt("Insira o valor da sua base: "))
+    let expoente = Number(prompt("Agora insira o valor do seu expoente: "))
+
+    if (base === null || expoente === null || base == "" || expoente == "") {
+        return alert("Nenhum valor inserido!")
+    }
+    else if (isNaN(base) || isNaN(expoente)) {
+        return alert("Você inseriu um valor inválido!")
+    }
+    else {
+        return alert(`O valor da operação de exponenciação é igual a ${Math.pow(base, expoente)}`)
+    }
+}
+
+exponenciacao()
